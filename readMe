@@ -1,0 +1,13 @@
+docker start [container_id]
+docker stop [container_id]
+docker ps
+docker images ls
+
+docker build -f 'Dockerfile' -t harry2024/empnodejs --label harry2024/empnodejss .
+docker run -it -e PORT=4000 -p 4000:4000 harry2024/empnodejs
+docker exec -it [image_id] bash
+
+docker-compose.yml
+socker compose up
+docker compose down
+docker compose up -d
