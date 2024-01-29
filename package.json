@@ -5,10 +5,12 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.js",
-    "dev": "nodemon main.js"
+    "start": "node src/main.js",
+    "dev": "nodemon src/main.js"
   },
-  "keywords": [],
+  "keywords": [
+    "nodejs"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
