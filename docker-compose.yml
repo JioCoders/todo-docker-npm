@@ -4,7 +4,7 @@ services:
   # postgres: 
   #   image: postgres # hub.docker.com
   #   ports:
-  #     - 5432:5432
+  #     - '5432:5432'
   #   environment:
   #     - POSTGRES-USER=postgres
   #     - POSTGRES-DB=postgres
@@ -12,7 +12,15 @@ services:
       
   # redis:
   #   image: redis
+  #   restart: always
   #   ports:
-  #     - 6379:6379
-    
+  #     - '6379:6379'
+  #   volumes: 
+  #     - cache:/data
+
+volumes:
+  db:
+    driver: local
+  cache:
+    driver: local
     
