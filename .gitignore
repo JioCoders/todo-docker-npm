@@ -5,7 +5,6 @@
 # text file
 actions-runner/
 db/
-.github/
 *.txt
 *.pem
 
