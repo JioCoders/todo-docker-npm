@@ -12,7 +12,7 @@ const config = {
     ssl: {
         require: true,
         rejectUnauthorized: false,
-        ca: fs.readFileSync("./src/services/connection/ca.pem").toString(),
+        ca: fs.readFileSync("./src/service/connection/ca.pem").toString(),
     },
     listPerPage: env.LIST_PER_PAGE || 10,
 };

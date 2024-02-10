@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const quotes = require('../services/quotes');
+const quotes = require('../service/quotes');
 
 /* GET quotes listing. */
 router.get('/', async function (req, res, next) {
