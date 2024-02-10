@@ -1,23 +1,21 @@
-FROM ubuntu as build
-
-RUN apt-get update
-RUN apt-get install -y curl
-RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
-RUN apt-get upgrade -y
-RUN apt-get install -y nodejs
+FROM node:18-alpine as base
 
 WORKDIR /app
 
-COPY package.json package.json
-COPY package-lock.json package-lock.json
+# COPY package.json package.json
+# COPY package-lock.json package-lock.json
+COPY package*.json ./
 
 RUN npm install
 
 COPY . .
 
-FROM node as runner
+FROM base as runner
 
-EXPOSE 8000
+ENV PORT=4000
+EXPOSE 4000
+
+USER node
 
 CMD [ "npm", "start" ]
 # ENTRYPOINT [ "node", "main.js" ]

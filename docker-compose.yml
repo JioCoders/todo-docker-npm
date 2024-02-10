@@ -1,26 +1,109 @@
 version: '3.8'
 
 services:
+  # prometheus:
+  #   image: prom/prometheus
+  #   container_name: Jio-prometheus
+  #   ports:
+  #     - 9090:9090
+  #   networks:
+  #     - harry-network
+  #   volumes:
+  #     - harry-vol2:/etc/prometheus/prometheus
+  # node-exporter:
+  #   image: prom/node-exporter
+  #   container_name: Jio-nodexporter
+  #   ports:
+  #     - 9100:9100
+  #   networks:
+  #     - harry-network
+  # alert-manager:
+  #   image: prom/alertmanager
+  #   container_name: Jio-alertmanager
+  #   networks:
+  #     - harry-network
+  #   ports:
+  #     - 9093:9093
+  #   volumes:
+  #     - harry-vol2:/alertmanager/alertmanager
+
+  # grafana:
+  #   image: grafana/grafana-enterprise
+  #   container_name: Jio-grafana
+  #   restart: unless-stopped
+  #   ports:
+  #     - '3000:3000'
+  #   environment:
+  #    - GF_SERVER_ROOT_URL=http://my.grafana.server/
+  #    - GF_INSTALL_PLUGINS=grafana-clock-panel
+  #   networks:
+  #     - harry-network
+  #   volumes:
+  #     - harry-vol2:/var/lib/grafana 
+  
+  # nginx:
+  #   image: nginx:1.11.8-alpine
+  #   container_name: Jio-nginx
+  #   ports:
+  #     - "8081:80"
+  #   networks:
+  #     - harry-network
+  #   volumes:
+  #     - harry-vol2:/usr/src/data
+  
+  # jenkins:
+  #   image: jenkins/jenkins:lts
+  #   container_name: Jio-jenkins
+  #   privileged: true
+  #   user: root
+  #   ports:
+  #     - 8080:8080
+  #     - 50000:50000
+  #   networks:
+  #     - harry-network
+  #   volumes:
+  #     - harry-vol2:/usr/src/data/jenkins_home
+
   # postgres: 
-  #   image: postgres # hub.docker.com
+  #   image: postgres 
+  #   container_name: Jio-postgres
+  #   restart: always
   #   ports:
   #     - '5432:5432'
   #   environment:
   #     - POSTGRES-USER=postgres
-  #     - POSTGRES-DB=postgres
+  #     - POSTGRES-DB=iimdb
   #     - POSTGRES-PASSWORD=password
       
-  # redis:
-  #   image: redis
-  #   restart: always
-  #   ports:
-  #     - '6379:6379'
-  #   volumes: 
-  #     - cache:/data
+  redis:
+    image: redis/redis-stack
+    container_name: Jio-redis
+    restart: on-failure
+    ports:
+      - '6379:6379'
+      - '8001:8001'
+    networks:
+      - harry-network
+    # command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+    volumes: 
+      - cache:/data
 
 volumes:
   db:
     driver: local
   cache:
     driver: local
+  # grafana-storage: {}
+  harry-vol2:
+    driver: local
+    driver_opts:
+       o: bind
+       type: none
+       device: C:/Users/HARI/OneDrive/Desktop/docker-volume
+networks:
+  harry-network:
+    driver: bridge
+secrets:
+  db-password:
+    file: db/password.txt
     
