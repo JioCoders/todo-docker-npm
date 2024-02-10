@@ -2,5 +2,6 @@ docker-notes.txt
 response.http
 README.md
 
+docker-compose.yml
 node_modules/
 .env

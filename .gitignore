@@ -4,6 +4,8 @@
 
 # text file
 *.txt
+db/
+*.pem
 
 # Logs
 logs

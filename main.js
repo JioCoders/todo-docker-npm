@@ -1,19 +1,25 @@
 require("dotenv").config();
 
+const path = require('path');
+const logger = require('morgan');
 const express = require("express");
 
+const indexRouter = require('./src/router/indexRoute');
+const quoteRouter = require('./src/router/quoteRoute');
 const app = express();
 
-// initialize middleware
+// initialize middleware    
 app.use(express.json({ extended: false }));
-app.get("/", (req, res) => res.send("Server up and running"));
-app.get("/health", (req, res) => res.send("Server is healthy"));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.static(__dirname + '/static'));
+// use routers
+app.use(logger('dev'));
+app.use('/', indexRouter);
+app.use('/quote', quoteRouter);
 
-// setting up port
+// start server
 const PORT = process.env.PORT || 8000;
-
 app.listen(PORT, () => {
     console.log(`server is running on http://localhost:${PORT}`);
 });
