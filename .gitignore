@@ -3,8 +3,10 @@
 #################
 
 # text file
-*.txt
+actions-runner/
 db/
+.github/
+*.txt
 *.pem
 
 # Logs

@@ -3,6 +3,8 @@ response.http
 README.md
 
 docker-compose.yml
+action-runner/
 node_modules/
+.github
 .git
 .env
