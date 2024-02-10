@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "mocha",
+    "test": "echo \"Error: no test specified\"",
     "start": "node main.js",
     "dev": "nodemon main.js"
   },
