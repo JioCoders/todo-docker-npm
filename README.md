@@ -16,43 +16,26 @@
 
 docker run -p 9090:9090 -v /path/to/prometheus.yml:/etc/prometheus/prometheus.yml -v harry-vol2:/prometheus prom/prometheus
 
-# [Tailwind Toolbox](https://www.tailwindtoolbox.com/) - [Profile-Card](https://www.tailwindtoolbox.com/templates/profile-card)
+# nodejs-posgresql
 
-[Profile Card](https://www.tailwindtoolbox.com/templates/profile-card) is a single page template for use as a user profile website / card created in [Tailwind CSS](https://tailwindcss.com/) by [Tailwind Toolbox](https://www.tailwindtoolbox.com/).
+A demo Quotes REST API using Node.js and PostgreSQL. Built with Express Js for this [Node.js PostgreSQL tutorial](https://geshan.com.np/blog/2021/01/nodejs-postgresql-tutorial/).
 
-![Profile Card](https://www.tailwindtoolbox.com/templates/profile-card.png)
+## Deploy with Heroku
 
-## Getting Started
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/geshan/nodejs-posgresql/tree/master)
 
-Choose one of the following options to get started:
-* [Download the latest release](https://github.com/tailwindtoolbox/Profile-Card/archive/master.zip)
-* Clone the repo: `git clone https://github.com/tailwindtoolbox/Profile-Card.git`
-* Fork the repo
+## Deploy with Vercel
 
-## Using the Template
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fgeshan%2Fnodejs-posgresql)
 
-The template is just a HTML file using a full CDN hosted Tailwind CSS file.
+## Deploy to [Cyclic](https://app.cyclic.sh/#/join/geshan)
 
-To get the best out of Tailwind CSS, you need to really start customising it.
-Take a look at our [setup guide](https://www.tailwindtoolbox.com/setup) to start tweaking!
+[![Deploy to Cyclic](https://deploy.cyclic.app/button.svg)](https://deploy.cyclic.app/)
 
-## Bugs and Issues
+## Deploy to [Render](https://render.com?utm_source=geshan.com.np)
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/tailwindtoolbox/Profile-Card/issues/new) here on GitHub.
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 
-## Creator
+### Running on Vercel
 
-[Tailwind Toolbox](https://www.tailwindtoolbox.com/) was created by and is maintained by **[Amrit Nagi](https://amritnagi.info/)**, Co-owner of [Astrava.Solutions](https://astrava.solutions).
-
-* https://twitter.com/tailwindtoolbox
-* https://twitter.com/amritnagi
-* https://github.com/tailwindtoolbox
-
-Tailwind Toolbox is based on the [Tailwind CSS](https://www.tailwindcss.com/) framework created by [Adam Wathan](https://twitter.com/adamwathan), [Jonathan Reinink](https://twitter.com/reinink), [David Hemphill](https://twitter.com/davidhemphill) and [Steve Schoger](https://twitter.com/steveschoger)
-
-
-
-
-## Copyright and License
-
-Copyright 2018-2019 Astrava.Solutions Ltd. Code released under the MIT license.
+At: [https://nodejs-postgresql.vercel.app/quotes](https://nodejs-postgresql.vercel.app/quotes)

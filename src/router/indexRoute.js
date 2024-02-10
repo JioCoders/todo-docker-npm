@@ -5,6 +5,19 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
     res.json({ message: 'alive', time: Date.now() });
 });
+router.get('/weather', async (req, res) => {
+    if (!req.query.city) {
+        res.status(404).json("City is missing");
+    } else {
+        let city = req.query.city;
+        const weatherApi = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.WEATHER_API_KEY}`;
+        console.log('weather api: ', weatherApi);
+        const response = await fetch(weatherApi);
+
+        const data = await response.json();
+        res.status(200).json(data);
+    }
+})
 
 router.get("/health", (req, res) => {
     console.log("Server is up and running!");

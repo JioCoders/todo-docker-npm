@@ -25,11 +25,11 @@ docker logs [container_name]
 
 # cmd for build an image from Dockerfile
 
-docker build -f 'Dockerfile' -t harry2024/emp-nodejs --label harry2024/empnodejss .
+Docker build -f 'Dockerfile' -t harry2024/emp-nodejs --label harry2024/empnodejss .
 
-docker run -it -e PORT=4000 -p 4000:4000 --name my_container harry2024/emp-nodejs
-docker exec -it [container_name] bash
-docker exec -it [container_name] sh
+Docker run -it -e PORT=4000 -p 4000:4000 --name my_container harry2024/emp-nodejs
+Docker exec -it [container_name] bash
+Docker exec -it [container_name] sh
 
 # cmd for docker-compose.yml
 
