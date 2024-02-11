@@ -72,7 +72,7 @@ services:
   #     - '5432:5432'
   #   environment:
   #     - POSTGRES-USER=postgres
-  #     - POSTGRES-DB=iimdb
+  #     - POSTGRES-DB=
   #     - POSTGRES-PASSWORD=password
       
   redis:
