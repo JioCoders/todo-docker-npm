@@ -5,6 +5,7 @@
 # text file
 # .github/
 *.txt
+docker-compose.yml
 actions-runner/
 db/
 *.pem
