@@ -3,7 +3,7 @@ const supertest = require("supertest");
 const request = supertest(app);
 
 describe("/test endpoint", () => {
-    it("This should return a response", async () => {
+    it("This test should return a response", async () => {
         console.log("Jiocoders should return a response");
         const response = await request.get("/test")
         expect(response.status).toBe(200)
