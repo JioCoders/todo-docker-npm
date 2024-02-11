@@ -1,5 +1,3 @@
-<a href="https://postgresql.org"><img src="https://img.shields.io/badge/Powered%20by-PostgreSQL-blue.svg"/></a>
-
 ## ---------------------------------------------
 
 ├── docker-nodejs-sample/
@@ -17,10 +15,9 @@
 ## ---------------------------------------------
 
 [![Docker Image CI](https://github.com/JioCoders/todo-docker-npm/actions/workflows/docker-image.yml/badge.svg)](https://github.com/JioCoders/todo-docker-npm/actions/workflows/docker-image.yml)
-
 [![Node.js CI](https://github.com/JioCoders/todo-docker-npm/actions/workflows/node.js.yml/badge.svg)](https://github.com/JioCoders/todo-docker-npm/actions/workflows/node.js.yml)
-
 [![CodeQL](https://github.com/JioCoders/todo-docker-npm/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/JioCoders/todo-docker-npm/actions/workflows/github-code-scanning/codeql)
+<a href="https://postgresql.org"><img src="https://img.shields.io/badge/Powered%20by-PostgreSQL-blue.svg"/></a>
 
 # cmds
 

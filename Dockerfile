@@ -27,4 +27,3 @@ USER node
 
 # Set the command to start the node server
 CMD [ "npm", "start" ]
-# ENTRYPOINT [ "node", "main.js" ]

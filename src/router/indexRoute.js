@@ -3,7 +3,16 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.json({ message: 'alive', time: Date.now() });
+    res.status(200).json({ message: 'alive', time: Date.now() });
+});
+router.get("/test", (_req, res) => {
+    console.log("Test has been started..");
+    res.send("Hello, Jiocoders")
+});
+router.get("/health", (req, res) => {
+    console.log("Server is up and running!");
+    const message = 'Server is up and running healthy';
+    res.json({ message });
 });
 router.get('/weather', async (req, res) => {
     if (!req.query.city) {
@@ -17,12 +26,6 @@ router.get('/weather', async (req, res) => {
         const data = await response.json();
         res.status(200).json(data);
     }
-})
-
-router.get("/health", (req, res) => {
-    console.log("Server is up and running!");
-    const message = 'Server is up and running healthy';
-    res.json({ message });
 });
 
 module.exports = router;
