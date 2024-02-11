@@ -71,11 +71,14 @@ services:
     ports:
       - '5432:5432'
     environment:
-      - PG_HOST=pg-todo-todo-node.a.aivencloud.com
-      - PG_PORT=25398
-      - PG_DB=defaultdb
-      - PG_USER=avnadmin
-      - PG_PASSWORD=AVNS_ApHgEbkJH_Hs_Ltue2V
+      - NODE_ENV: production
+      - DB_HOST: db
+      - DB_PORT: 5432
+      - DB_USER: postgres
+      - DB_PASSWORD: postgres
+      - DB_NAME: postgres
+    links:
+      - db
     networks:
       - harry-network
     volumes:
