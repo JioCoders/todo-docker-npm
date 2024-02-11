@@ -1,4 +1,4 @@
-const db = require('./connection/conn');
+const db = require('./connection/connect');
 const helper = require('./helper');
 const config = require('./connection/config');
 
