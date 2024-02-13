@@ -1,19 +1,26 @@
 ## ---------------------------------------------
 
-├── docker-nodejs-sample/
-│ ├── spec/
-│ ├── src/
-│ ├── .dockerignore
-│ ├── .gitignore
-│ ├── compose.yaml
-│ ├── Dockerfile
-│ ├── package-lock.json
-│ ├── package.json
-│ ├── README.Docker.md
-│ └── README.md
+## Folder structure:
+
+```
+  ├── app.js       - starting point of the application
+  ├── config
+  │   └── db.js    - contains api database connection
+  ├── constants    - contains commonly used constants
+  ├── controllers
+  │   └── platform - contains business logic
+  ├── jobs         - cron jobs
+  ├── models       - models of application
+  ├── postman      - postman collection files
+  ├── routes       - contains all the routes of application
+  ├── services     - contains commonly used services
+  ├── views        - templates
+  └── utils        - contains utility functions
+```
 
 ## ---------------------------------------------
 
+[![Manual workflow](https://github.com/JioCoders/todo-docker-npm/actions/workflows/manual.yml/badge.svg)](https://github.com/JioCoders/todo-docker-npm/actions/workflows/manual.yml)
 [![Docker Image CI](https://github.com/JioCoders/todo-docker-npm/actions/workflows/docker-image.yml/badge.svg)](https://github.com/JioCoders/todo-docker-npm/actions/workflows/docker-image.yml)
 [![Node.js CI](https://github.com/JioCoders/todo-docker-npm/actions/workflows/node.js.yml/badge.svg)](https://github.com/JioCoders/todo-docker-npm/actions/workflows/node.js.yml)
 [![CodeQL](https://github.com/JioCoders/todo-docker-npm/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/JioCoders/todo-docker-npm/actions/workflows/github-code-scanning/codeql)
@@ -21,11 +28,11 @@
 
 # cmds
 
-docker run -p 9090:9090 -v /path/to/prometheus.yml:/etc/prometheus/prometheus.yml -v harry-vol2:/prometheus prom/prometheus
+```$ docker run -p 9090:9090 -v /path/to/prometheus.yml:/etc/prometheus/prometheus.yml -v harry-vol2:/prometheus prom/prometheus```
 
 # nodejs-posgresql
 
-A demo Quotes REST API using Node.js and PostgreSQL. Built with Express Js for this [Node.js PostgreSQL tutorial](https://geshan.com.np/blog/2021/01/nodejs-postgresql-tutorial/).
+```$ A demo Quotes REST API using Node.js and PostgreSQL. Built with Express Js for this [Node.js PostgreSQL tutorial](https://geshan.com.np/blog/2021/01/nodejs-postgresql-tutorial/).```
 
 ## Deploy with Heroku
 

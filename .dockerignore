@@ -4,7 +4,16 @@ README.md
 
 docker-compose.yml
 action-runner/
-node_modules/
 .github
 .git
 .env
+
+# Exclude locally installed dependencies
+node_modules/
+
+# Exclude "build-time" ignore files.
+# .dockerignore
+# .gcloudignore
+
+# Exclude git history and configuration.
+.gitignore
