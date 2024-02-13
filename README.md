@@ -1,5 +1,3 @@
-## ---------------------------------------------
-
 ## Folder structure:
 
 ```
@@ -18,8 +16,6 @@
   └── utils        - contains utility functions
 ```
 
-## ---------------------------------------------
-
 [![Manual workflow](https://github.com/JioCoders/todo-docker-npm/actions/workflows/manual.yml/badge.svg)](https://github.com/JioCoders/todo-docker-npm/actions/workflows/manual.yml)
 [![Docker Image CI](https://github.com/JioCoders/todo-docker-npm/actions/workflows/docker-image.yml/badge.svg)](https://github.com/JioCoders/todo-docker-npm/actions/workflows/docker-image.yml)
 [![Node.js CI](https://github.com/JioCoders/todo-docker-npm/actions/workflows/node.js.yml/badge.svg)](https://github.com/JioCoders/todo-docker-npm/actions/workflows/node.js.yml)
@@ -28,11 +24,11 @@
 
 # cmds
 
-```$ docker run -p 9090:9090 -v /path/to/prometheus.yml:/etc/prometheus/prometheus.yml -v harry-vol2:/prometheus prom/prometheus```
+`$ docker run -p 9090:9090 -v /path/to/prometheus.yml:/etc/prometheus/prometheus.yml -v harry-vol2:/prometheus prom/prometheus`
 
 # nodejs-posgresql
 
-```$ A demo Quotes REST API using Node.js and PostgreSQL. Built with Express Js for this [Node.js PostgreSQL tutorial](https://geshan.com.np/blog/2021/01/nodejs-postgresql-tutorial/).```
+`$ A demo Quotes REST API using Node.js and PostgreSQL. Built with Express Js for this [Node.js PostgreSQL tutorial](https://geshan.com.np/blog/2021/01/nodejs-postgresql-tutorial/).`
 
 ## Deploy with Heroku
 
