@@ -1,13 +1,11 @@
 # Use node image as base image
-FROM node:18-alpine as base
+FROM node:20-alpine as base
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /emp-node-docker
 
-# Copy the package.json and package-lock.json
+# Copy the package.json and package-lock.json and Install dependencies
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install
 
 # Copy the rest of the application code
