@@ -17,9 +17,11 @@
 ```
 
 [![Manual workflow](https://github.com/JioCoders/todo-docker-npm/actions/workflows/manual.yml/badge.svg)](https://github.com/JioCoders/todo-docker-npm/actions/workflows/manual.yml)
+[![Docker](https://github.com/JioCoders/todo-docker-npm/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/JioCoders/todo-docker-npm/actions/workflows/docker-publish.yml)
 [![Docker Image CI](https://github.com/JioCoders/todo-docker-npm/actions/workflows/docker-image.yml/badge.svg)](https://github.com/JioCoders/todo-docker-npm/actions/workflows/docker-image.yml)
 [![Node.js CI](https://github.com/JioCoders/todo-docker-npm/actions/workflows/node.js.yml/badge.svg)](https://github.com/JioCoders/todo-docker-npm/actions/workflows/node.js.yml)
 [![CodeQL](https://github.com/JioCoders/todo-docker-npm/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/JioCoders/todo-docker-npm/actions/workflows/github-code-scanning/codeql)
+[![Build and Deploy to GKE](https://github.com/JioCoders/todo-docker-npm/actions/workflows/google.yml/badge.svg)](https://github.com/JioCoders/todo-docker-npm/actions/workflows/google.yml)
 <a href="https://postgresql.org"><img src="https://img.shields.io/badge/Powered%20by-PostgreSQL-blue.svg"/></a>
 
 # cmds

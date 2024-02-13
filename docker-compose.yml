@@ -1,6 +1,37 @@
 version: '3.8'
 
 services:
+  node-app:
+    container_name: node-app
+    image: node:20-alpine
+    user: root
+    command: ["/bin/bash","-lc","npm i && npm start"]
+    ports:
+      - '5000:5000'
+    depends_on:
+      - postgres
+    working_dir: /home/node/app
+    volumes:
+      - ./:/home/node/app
+      - ./.env.docker:/home/node/app/.env
+    networks:
+      - harry-network
+
+  postgres: 
+    image: postgres 
+    container_name: postgres
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER: postgres
+      - POSTGRES_PASSWORD: postgres
+      - POSTGRES_NAME: testdb
+    networks:
+      - harry-network
+    # volumes:
+    #   - harry-vol2:/var/lib/postgresql/data
+            
   # prometheus:
   #   image: prom/prometheus
   #   container_name: Jio-prometheus
@@ -64,44 +95,25 @@ services:
   #   volumes:
   #     - harry-vol2:/usr/src/data/jenkins_home
 
-  postgres: 
-    image: postgres 
-    container_name: Jio-postgres
-    restart: always
-    ports:
-      - '5432:5432'
-    environment:
-      - NODE_ENV: production
-      - DB_HOST: db
-      - DB_PORT: 5432
-      - DB_USER: postgres
-      - DB_PASSWORD: postgres
-      - DB_NAME: postgres
-    links:
-      - db
-    networks:
-      - harry-network
-    volumes:
-      - harry-vol2:/var/lib/postgresql/data
-      
-  redis:
-    image: redis/redis-stack
-    container_name: Jio-redis
-    restart: on-failure
-    ports:
-      - '6379:6379'
-      - '8001:8001'
-    networks:
-      - harry-network
-    # command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
-    volumes: 
-      - cache:/data
+  # redis:
+  #   image: redis/redis-stack
+  #   container_name: Jio-redis
+  #   restart: on-failure
+  #   ports:
+  #     - '6379:6379'
+  #     - '8001:8001'
+  #   networks:
+  #     - harry-network
+  #   # command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+  #   volumes: 
+  #     - cache:/data
 
 volumes:
   db:
     driver: local
   cache:
     driver: local
+  # dbdata:
   # grafana-storage: {}
   harry-vol2:
     driver: local
